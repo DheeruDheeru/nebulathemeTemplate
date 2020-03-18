@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="form-group">
+        <div class="col-lg-6">
+            <nb-form-field>
+                <nb-icon nbPrefix icon="person-outline" pack="eva"></nb-icon>
+                <input type="text" nbInput status="basic" fullWidth shape="semi-round" placeholder="Username or Email" required>
+            </nb-form-field>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-lg-6">
+            <nb-form-field>
+                <nb-icon nbPrefix icon="lock-outline" pack="eva"></nb-icon>
+                <input [type]="getInputType()" nbInput fullWidth status="basic" shape="semi-round" placeholder="Password" required>
+                <button nbSuffix nbButton ghost (click)="toggleShowPassword()">
+                    <nb-icon [icon]="showPassword ? 'eye' : 'eye-off-2'"
+                                pack="eva">
+                    </nb-icon>
+                </button>    
+            </nb-form-field>    
+        </div>
+    </div>
+    <div class="form-group">
+        <input nbButton type="submit" value="login" status="success" id="submit"/>
+    </div>
+</div>

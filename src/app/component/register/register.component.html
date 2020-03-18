@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="form-group">
+        <div class="row-md-6 input-row">
+            <input type="text" name="FirstName" id="" nbInput shape="semi-round" placeholder="First Name" required>
+            <input type="text" name="MiddleName" id="" nbInput shape="semi-round" placeholder="Middle Name">
+            <input type="text" name="LastName" id="" nbInput shape="semi-round" placeholder="Last Name" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <div>
+            <input type="text" name="username" nbInput fullWidth shape="semi-round" placeholder="Username" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <div>
+            <input type="email" name="email" nbInput fullWidth shape="semi-round" placeholder="xyz@mail.com" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <div>
+            <input type="number" name="number" nbInput fullWidth shape="semi-round" placeholder="Contact number" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row-md-4">
+            <nb-radio-group>
+                <nb-radio value="Male">Male</nb-radio>
+                <nb-radio value="Female">Female</nb-radio>
+            </nb-radio-group>   
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row-md-6">
+            <input nbInput placeholder="Date of Birth" id="dateofbirth" [nbDatepicker]="formpicker">
+            <nb-datepicker format="dd/MM/yyyy" #formpicker></nb-datepicker>
+            <span><strong>Age:</strong>{{age}}</span>
+        </div>
+    </div>
+</div>
